@@ -1,0 +1,83 @@
+.mv {
+    position: relative;
+    background: linear-gradient(to bottom, $color-black, $color-orange);
+
+    &__title {
+        position: absolute;
+        top: get_vw(200);
+        right: get_vw(70);
+        text-align: center;
+        color: $color-white;
+        font-size: get_vw(80);
+        font-family: $font-all;
+        letter-spacing: 4px;
+        opacity: 0;
+        @include sp {
+            top: get_vw_sp(80);
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            font-size: get_vw_sp(45);
+        }
+    }
+
+    &__home,
+    &__git {
+        position: absolute;
+        right: get_vw(70);
+        color: $color-white;
+        font-size: get_vw(30);
+        font-family: $font-all;
+        letter-spacing: 2px;
+        text-decoration: none;
+        opacity: 0;
+        @include sp {
+            right: get_vw_sp(20);
+            font-size: get_vw_sp(24);
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+    &__home {
+        bottom: get_vw(120);
+        @include sp {
+            bottom: get_vw_sp(60);
+        }
+    }
+    &__git {
+        bottom: get_vw(80);
+        @include sp {
+            bottom: get_vw_sp(20);
+        }
+    }
+
+    &__finger,
+    &__circle {
+        display: none;
+        @include sp {
+            display: block;
+            position: absolute;
+            z-index: $z-2;
+        }
+    }
+    &__finger {
+        @include sp {
+            transform: rotate(270deg);
+            left: get_vw_sp(50);
+            bottom: get_vw_sp(60);
+            width: get_vw_sp(20);
+            opacity: 0;
+        }
+    }
+    &__circle {
+        @include sp {
+            animation: animate-circle 20s linear 0s infinite;
+            left: get_vw_sp(13);
+            bottom: get_vw_sp(24);
+            width: get_vw_sp(90);
+            opacity: 0;
+        }
+    }
+}

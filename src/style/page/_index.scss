@@ -1,0 +1,9 @@
+@import '../components/loading';
+@import '../components/mv';
+
+.sp-only {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
