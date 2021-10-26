@@ -22,7 +22,8 @@
     }
 
     &__home,
-    &__git {
+    &__git,
+    &__note {
         position: absolute;
         right: get_vw(70);
         color: $color-white;
@@ -41,12 +42,18 @@
         }
     }
     &__home {
+        bottom: get_vw(160);
+        @include sp {
+            bottom: get_vw_sp(100);
+        }
+    }
+    &__git {
         bottom: get_vw(120);
         @include sp {
             bottom: get_vw_sp(60);
         }
     }
-    &__git {
+    &__note {
         bottom: get_vw(80);
         @include sp {
             bottom: get_vw_sp(20);
